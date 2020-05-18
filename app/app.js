@@ -5,3 +5,10 @@ client.init(<APPID>, function () {
 }, function (err) {
   console.log("AgoraRTC client init failed", err);
 });
+
+localStream.init(function() {
+  console.log("getUserMedia successfully");
+  localStream.play('agora_local');
+}, function (err) {
+  console.log("getUserMedia failed", err);
+});
